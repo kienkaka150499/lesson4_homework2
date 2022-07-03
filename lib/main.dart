@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 void main() {
   runApp(MyApp());
 }
@@ -9,20 +10,30 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('My Homework 2'),
-        ),
-        body: SafeArea(
-          child: Center(
+      home: Home(),
+    );
+  }
+}
+
+class Home extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('My Homework 2'),
+      ),
+      body: SafeArea(
+        child: ListView(
+          children: [Center(
             child: SizedBox(
-              width: 350,
-              height: 650,
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.width*2.5,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: 200,
+                    height: MediaQuery.of(context).size.width*0.8,
                     child: Row(
                       children: [
                         Expanded(
@@ -38,16 +49,16 @@ class MyApp extends StatelessWidget {
                                 Text(
                                   'Lập trình Flutter',
                                   style: TextStyle(
-                                      fontSize: 25,
+                                      fontSize: 13,
                                       fontWeight: FontWeight.w700),
                                 ),
                                 Text(
                                   'Thực chiến dự án App',
-                                  style: TextStyle(fontSize: 18),
+                                  style: TextStyle(fontSize: 10),
                                 ),
                                 Text(
                                   'mobile 2022',
-                                  style: TextStyle(fontSize: 18),
+                                  style: TextStyle(fontSize: 10),
                                 ),
                               ],
                             ))
@@ -59,7 +70,7 @@ class MyApp extends StatelessWidget {
                     color: Colors.green,
                   ),
                   SizedBox(
-                    height: 200,
+                    height: MediaQuery.of(context).size.width*0.8,
                     child: Row(
                       children: [
                         Expanded(
@@ -70,16 +81,18 @@ class MyApp extends StatelessWidget {
                                   Text(
                                     'Lập trình',
                                     style: TextStyle(
-                                        fontSize: 25,
+                                        fontSize: 13,
                                         fontWeight: FontWeight.w700),
                                   ),
                                   Text(
                                     'Android',
-                                    style: TextStyle(fontSize: 25,fontWeight: FontWeight.w700),
+                                    style: TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w700),
                                   ),
                                   Text(
                                     'Java + Kotlin',
-                                    style: TextStyle(fontSize: 18),
+                                    style: TextStyle(fontSize: 10),
                                   ),
                                 ],
                               ),
@@ -98,7 +111,7 @@ class MyApp extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(5),
                     child: SizedBox(
-                      height: 200,
+                      height: MediaQuery.of(context).size.width*0.8,
                       child: Row(
                         children: [
                           Expanded(
@@ -116,22 +129,22 @@ class MyApp extends StatelessWidget {
                                   Text(
                                     'Lập trình',
                                     style: TextStyle(
-                                        fontSize: 23,
+                                        fontSize: 11,
                                         fontWeight: FontWeight.w700),
                                   ),
                                   Text(
                                     'Java cơ bản',
                                     style: TextStyle(
-                                        fontSize: 25,
+                                        fontSize: 11,
                                         fontWeight: FontWeight.w700),
                                   ),
                                   Text(
                                     'Cho người mới',
-                                    style: TextStyle(fontSize: 18),
+                                    style: TextStyle(fontSize: 10),
                                   ),
                                   Text(
                                     'bắt đầu',
-                                    style: TextStyle(fontSize: 18),
+                                    style: TextStyle(fontSize: 10),
                                   ),
                                 ],
                               ))
@@ -143,9 +156,8 @@ class MyApp extends StatelessWidget {
               ),
             ),
           ),
-        ),
+        ]),
       ),
     );
   }
 }
-
